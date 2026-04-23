@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-spartan: "League Spartan", sans-serif;
+  
+  --color-primary: #7c5dfa;
+  --color-primary-light: #9277ff;
+  --color-sidebar: #1e2139;
+  --color-ebony-clay: #252945;
+  --color-selago: #Dfe3fa;
+  --color-bali-hai: #888eb0;
+  --color-ship-cove: #7e88c3;
+  --color-vulcan: #0c0E16;
+  --color-burnt-sienna: #ec5757;
+  --color-mona-lisa: #FF9797;
+  --color-ghost-white: #f8f8fb;
+  --color-rich-black: #141625;
+
+  /* Functional Theme Variables */
+  --color-main: var(--color-vulcan);
+  --color-secondary: var(--color-bali-hai);
+  --color-bg-app: var(--color-ghost-white);
+  --color-bg-card: #ffffff;
+  --color-border-color: var(--color-selago);
+}
+
+.dark {
+  --color-main: #ffffff;
+  --color-secondary: var(--color-selago);
+  --color-bg-app: var(--color-rich-black);
+  --color-bg-card: var(--color-sidebar);
+  --color-border-color: var(--color-ebony-clay);
+}
+
+@layer utilities {
+  .text-heading-l {
+    font-family: var(--font-spartan);
+    font-size: 36px;
+    line-height: 33px;
+    letter-spacing: -1px;
+    font-weight: 700;
+  }
+  .text-heading-m {
+    font-family: var(--font-spartan);
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: -0.75px;
+    font-weight: 700;
+  }
+  .text-heading-s {
+    font-family: var(--font-spartan);
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+  }
+  .text-heading-s-variant {
+    font-family: var(--font-spartan);
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+  }
+  .text-body {
+    font-family: var(--font-spartan);
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    font-weight: 500;
+  }
+  .text-body-variant {
+    font-family: var(--font-spartan);
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
+  }
+}
+
+.text-color-main{
+  color: var(--color-main);
+}
+
+.white-background{
+  background-color: #f8f8fb;
+}
+.dark-background{
+  background-color: #141625;
+}
+
+body {
+  font-family: var(--font-spartan);
+  background-color: var(--color-bg-app);
+  color: var(--color-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
